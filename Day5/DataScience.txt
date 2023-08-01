@@ -1,0 +1,6 @@
+It’s been said that Data Scientist is the sexiest job title of the 21st century. Why is it such 
+a demanded position these days? The short answer is that over the last decade there’s been a
+massive explosion in both the data generated and retained by companies, as well as you and
+me. Sometimes we call this big data, and like a pile of lumber we'd like to build something
+with it. Data scientists are the people who make sense out of all this data and figure out just
+what can be done with it.

@@ -1,0 +1,18 @@
+import requests
+from bs4 import BeautifulSoup
+import pandas as pd
+# Download the HTML content of the Wikipedia page.
+response = requests.get("https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_population")
+# Create a BeautifulSoup object from the HTML content.
+soup = BeautifulSoup(response.content, "html.parser")
+# Find the table element on the page.
+table = soup.find("table", class_="wikitable")
+# Extract the data from the table into a Pandas DataFrame.
+df = pd.read_html(table.prettify())[0]
+# Rename the columns.
+df.columns = ["Rank", "Country / Dependency", "Population", "% of the world", "Date", "Source (official or from the United Nations)", "Notes"]
+#printing the data
+print(df)
+# Converting it into DataFrame and Print the DataFrame.
+df1 = pd.DataFrame(df)
+df1
